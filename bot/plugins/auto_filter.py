@@ -290,4 +290,13 @@ async def recacher(group_id, ReCacheInvite=True, ReCacheActive=False, bot=Bot, u
                 achatId.append(int(x["chat_id"]))
             
             ACTIVE_CHATS[str(group_id)] = achatId
-    return 
+    return
+ 
+        try:          
+            except errors.QueryIdInvalid:
+            await query.answer(
+                results=answers,
+                cache_time=0,
+                switch_pm_text=("Nothing found"),
+                switch_pm_parameter="",
+           )
